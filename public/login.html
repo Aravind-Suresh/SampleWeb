@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<head>
+  <title>Sample Web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./dashboard.js"></script>
+</head>
+<style>
+#caption {
+    left:40%;
+    top:22%;
+    position:absolute;
+}
+  #uploadform{
+    left:35%;
+    top:12%;
+    position:absolute;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: gray;
+    padding-left:0px;
+    padding-right:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #list_files {
+    top:35%;
+    position:absolute;
+  }
+</style>
+<body ng-app="">
+
+<div class="container" ng-controller="login" ng-show="visibility">
+  <h2><center>LOGIN</center></h2>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="username" class="form-control" id="username" placeholder="Enter username" ng-model="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" ng-model="password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="check(username, password)">Login</button>
+    <h2><center>or REGISTER</center></h2>
+    <div class="form-group">
+      <label for="firstname">First name:</label>
+      <input type="username" class="form-control" id="firstname" placeholder="Enter firstname" ng-model="firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last name:</label>
+      <input type="username" class="form-control" id="lastname" placeholder="Enter lastname" ng-model="lastname">
+    </div>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="username" class="form-control" id="rusername" placeholder="Enter username" ng-model="rusername">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="rpassword" placeholder="Enter password" ng-model="rpassword">
+    </div>  
+    <div class="form-group">
+    <button type="submit" class="btn btn-success" ng-click="create_user(firstname, lastname, rusername, rpassword)">Register</button><br><br><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+var Models = {};
+
+Models.User 
