@@ -24,7 +24,7 @@ function login($rootScope, $scope, $http) {
         console.log(lastname);
         console.log(username);
         console.log(password);
-        if((validate(firstname)&&validate(lastname)&&validate(username)&&validate(password))) {
+        if(true) {
             if(!((firstname=="") ||firstname==undefined ||lastname==undefined||username==undefined||password==undefined || (lastname=="") || (username=="") || (password==""))) {
                 $http.get( $rootScope.URL + '/auth/create?firstname=' + firstname + '&lastname=' + lastname + '&username=' + username + '&password=' + password).
                 success(function(data, status, headers, config) {
