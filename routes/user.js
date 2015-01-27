@@ -109,11 +109,12 @@ router.get('/login', function(req, res) {
 			console.log(err);
 			return;
 		}
-		if(!userData[0].password) {
+		console.log(userData);
+		if(_.isEmpty(userData)) {
 			error.err(res,"305");
 			return;
 		}
-		if(bcrypt.compareSync(password,userData[0].password)) {
+		else if(bcrypt.compareSync(password,userData[0].password)) {
 
 			//res.end("Login successful");
 			console.log(querySetAccessToken);
